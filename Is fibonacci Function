@@ -1,0 +1,20 @@
+#Python program That when you input a number the program checks whether the number belongs to the Fibonacci Sequence or not
+def isfib(num):
+    term1 = 0
+    term2 = 1
+    while True:
+        if term2 <= num:
+            if term2 == num:
+                return True
+            else:
+                tempterm = term2
+                term2 += term1
+                term1 = tempterm
+
+        else:
+            return False
+number = int(input('Enter Number: '))
+if isfib(number):
+    print(number, 'Belongs to fibonacci Sequence')
+else:
+    print(number, 'Does not Belong to Fibonacci Sequence')
